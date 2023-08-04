@@ -1,0 +1,325 @@
+{
+	"info": {
+		"_postman_id": "49018f56-5e28-458f-8aed-55b19c2d42c1",
+		"name": "QR Generate API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "png",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/png/?size=500&ecl=H&data=123462w34567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"png",
+						""
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "500"
+						},
+						{
+							"key": "ecl",
+							"value": "H"
+						},
+						{
+							"key": "data",
+							"value": "123462w34567"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "png with logo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/pngWithLogo/?size=400&ecl=H&data=123462w34567rwqfgdpqw8fh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"pngWithLogo",
+						""
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "400"
+						},
+						{
+							"key": "ecl",
+							"value": "H"
+						},
+						{
+							"key": "data",
+							"value": "123462w34567rwqfgdpqw8fh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "svg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/svg/?size=300&ecl=H&data=123465",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"svg",
+						""
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "300"
+						},
+						{
+							"key": "ecl",
+							"value": "H"
+						},
+						{
+							"key": "data",
+							"value": "123465"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "base64 with logo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/base64WithLogo/?size=500&ecl=H&data=1231234567890-sbavnasnbvdsnbmdsbdsbs!@#$%^&*()_",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"base64WithLogo",
+						""
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "500"
+						},
+						{
+							"key": "ecl",
+							"value": "H"
+						},
+						{
+							"key": "data",
+							"value": "1231234567890-sbavnasnbvdsnbmdsbdsbs!@"
+						}
+					],
+					"hash": "$%^&*()_"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "base64",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/base64/?size=300&ecl=H&data=123465",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"base64",
+						""
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "300"
+						},
+						{
+							"key": "ecl",
+							"value": "H"
+						},
+						{
+							"key": "data",
+							"value": "123465"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "base64 with logo Res HTML",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/base64WithLogo/?size=500&ecl=H&html=1&data=1231234567890-sbavnasnbvdsnbmdsbdsbs!@#$%^&*()_",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"base64WithLogo",
+						""
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "500"
+						},
+						{
+							"key": "ecl",
+							"value": "H"
+						},
+						{
+							"key": "html",
+							"value": "1"
+						},
+						{
+							"key": "data",
+							"value": "1231234567890-sbavnasnbvdsnbmdsbdsbs!@"
+						}
+					],
+					"hash": "$%^&*()_"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "base64 Res HTML",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/base64/?size=300&ecl=H&html=1&data=123465",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"base64",
+						""
+					],
+					"query": [
+						{
+							"key": "size",
+							"value": "300"
+						},
+						{
+							"key": "ecl",
+							"value": "H"
+						},
+						{
+							"key": "html",
+							"value": "1"
+						},
+						{
+							"key": "data",
+							"value": "123465"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "read EMVQR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/readEMV/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"readEMV",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "personal EMVQR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/personalQrEMV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"personalQrEMV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "merchant EMVQR",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5005/qrcode/merchantQrEMV",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5005",
+					"path": [
+						"qrcode",
+						"merchantQrEMV"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
