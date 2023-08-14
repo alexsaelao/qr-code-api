@@ -38,25 +38,39 @@ exports.pngWithLogo = async (req, res) => {
         const ecl = req.query.ecl || 'H';
         const size = req.query.size || 400;
         const logoSize = size / 4;
-        const fileName = `qrcode-with-logo.png`;
-        const filePath = `public/images/qrcode`;
+        // const fileName = `qrcode-with-logo.png`;
+        // const filePath = `public/images/qrcode`;
         const logoPath = './public/images/lao-qr-bg-blue.svg';
-        const options = {
-            root: path.join(__dirname, '../public/images/qrcode/')
-        };
+        // const options = {
+        //     root: path.join(__dirname, '../public/images/qrcode/')
+        // };
 
         const dataURL = await QR.generateBase64QrWithLogo(playload, logoPath, size, logoSize, ecl)
 
-        await QR.base64ToImage(dataURL, fileName, filePath)
+        // // Old Code
 
-        return res.sendFile(fileName, options, function (err) {
-            if (err) {
-                console.log(err);
-                return res.send(err)
-            } else {
-                console.log('Sent:', fileName);
-            }
+        // await QR.base64ToImage(dataURL, fileName, filePath)
+
+        // return res.sendFile(fileName, options, function (err) {
+        //     if (err) {
+        //         console.log(err);
+        //         return res.send(err)
+        //     } else {
+        //         console.log('Sent:', fileName);
+        //     }
+        // });
+
+        // // New Code 
+        
+        const data = dataURL.replace(/^data:image\/\w+;base64,/, "");
+        const img = new Buffer.from(data, 'base64');
+        res.writeHead(200, {
+            'Content-Type': 'image/png',
+            'Content-Length': img.length
         });
+        res.end(img);
+
+
 
     } catch (error) {
         return error.message
